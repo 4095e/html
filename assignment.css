@@ -1,0 +1,158 @@
+* {
+    margin: 0;          
+    padding: 0;         
+    box-sizing: border-box;  
+}
+
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif; 
+    height: 100vh;    
+    background-color: #ffffff;  
+    overflow: hidden;  
+}
+
+.container {
+    display: flex;       
+    height: 100vh;      
+    align-items: stretch; 
+}
+
+
+.photo-section {
+    flex: 1;           
+    background: #000;    
+    display: flex-;      
+    align-items: center; 
+    justify-content: center; 
+    padding: 0;          
+    min-height: 100vh;   
+    position: relative;  
+    overflow: hidden;    
+}
+
+.networkinglogos{
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: rgb(94, 22, 187);
+    align-items: flex-end;
+}
+
+
+.photo-placeholder {
+    width: 100%;         
+    height: 100%;        
+    background-color: #000; 
+    display: flex;       
+    align-items: center; 
+    justify-content: center; 
+    font-size: 18px;     
+    color: #fff;         
+    position: relative; 
+}
+
+.photo-placeholder video {
+    width: 100%;         
+    height: 100%;        
+    object-fit: cover;  
+    position: absolute;  
+    top: 0;             
+    left: 0;            
+}
+
+.spacer {
+    width: 0px;          
+    background: transparent; 
+    flex-shrink: 0;      
+    min-height: 100vh;  
+}
+
+
+.text-section {
+    flex: 1;             
+    padding: 0;          
+    background-color: #ffffff; 
+    display: flex;       
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    overflow-y: auto;    
+    min-height: 100vh;   
+    max-height: 100vh;   
+}
+
+.text-content {
+    width: 100%;         
+    max-width: 700px;    
+    padding: 40px 50px;
+    line-height: 1.6;    
+}
+
+
+.logo-container {
+    text-align: center;  
+    margin-bottom: 40px; 
+    padding: 20px 0;     
+}
+
+
+.company-logo {
+    max-width: 350px;    
+    width: 100%;         
+    height: auto;        
+}
+
+
+h1 {
+    color: #2c3e50;      
+    font-size: 2.5em;   
+    font-weight: bold;   
+    margin-bottom: 30px; 
+    text-align: center;  
+    line-height: 1.3;    
+}
+
+h2 {
+    color: #34495e;     
+    font-size: 2em;      
+    font-weight: bold;   
+    margin-top: 40px;    
+    margin-bottom: 20px; 
+    line-height: 1.3;   
+}
+
+
+p {
+    color: #444444;      
+    font-size: 1.1em;    
+    line-height: 1.8;    
+    margin-bottom: 25px; 
+    text-align: justify; 
+    text-indent: 2em;    
+}
+
+
+    
+.spacer {
+    width: 0px; 
+    background: linear-gradient(to bottom, #667eea, #764ba2, #667eea);
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+    flex-shrink: 0; /* Prevent spacer from shrinking */
+    min-height: 100vh;
+}
+    
+
+    /* Smaller heading sizes for mobile */
+    h1 {
+        font-size: 2em;      
+    }
+    
+    h2 {
+        font-size: 1.6em;    
+    }
+    
+    
+    /* Smaller paragraph text on mobile */
+    p {
+        font-size: 1em;      /* Standard size for mobile readability */
+    }
