@@ -1,9 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /
+    box-sizing: border-box;
 }
-
 
 body {
     font-family: 'Arial', sans-serif;
@@ -15,12 +14,10 @@ body {
     padding: 20px; 
 }
 
-
 .container {
     max-width: 800px; 
     width: 100%; 
 }
-
 
 .id-card {
     background: white; 
@@ -28,7 +25,6 @@ body {
     display: flex; 
     min-height: 500px; 
 }
-
 
 .info-section {
     flex: 1; 
@@ -40,7 +36,6 @@ body {
     justify-content: space-between; 
 }
 
-
 .social-links {
     display: flex; 
     gap: 20px;
@@ -50,7 +45,7 @@ body {
 .social-icon {
     width: 60px; 
     height: 60px; 
-    background: white; 
+    background: rgb(255, 255, 255); 
     color: black; 
     display: flex; 
     align-items: center; 
@@ -70,16 +65,14 @@ body {
     height: 24px;  
 }
 
-
 .image-section {
     flex: 1; 
     display: flex; 
     align-items: center; 
     justify-content: center; 
-    background: #f8f9fa; 
+    background: #ff1919; 
     padding: 40px; 
 }
-
 
 .profile-image {
     width: 100%; 
@@ -94,5 +87,31 @@ body {
     object-position: center; 
 }
 
+/* Phone screens - vertical orientation */
+@media (max-width: 768px) and (orientation: portrait) {
+    .id-card {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .image-section {
+        background: #4CAF50; /* Green for phones */
+        order: -1; /* Image goes to top */
+    }
+    
+    .info-section {
+        padding: 30px 20px;
+    }
+    
+    .profile-image {
+        height: 250px;
+        max-width: 200px;
+    }
+}
 
-
+/* Tablet and Laptop screens */
+@media (min-width: 769px) {
+    .image-section {
+        background: #1849EC; /* Blue for larger screens */
+    }
+}
