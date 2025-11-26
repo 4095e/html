@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card Generator</title>
+    <link rel="stylesheet" href="Assignment_2.css">
+    <!-- Include html2canvas library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <form id="userForm" class="form-container">
+            <h2>Enter Your Details</h2>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="college">College Name</label>
+                <input type="text" id="college" name="college" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <div class="form-group">
+                <label for="photo">Upload Photo</label>
+                <input type="file" id="photo" name="photo" accept="image/*" required>
+            </div>
+            <button type="submit">Generate ID Card</button>
+        </form>
+
+        <div id="idCardContainer" class="hidden">
+            <div class="id-card" id="idCard">
+                <div class="id-card-header">
+                    <h2>College ID Card</h2>
+                </div>
+                <div class="id-card-body">
+                    <img id="displayPhoto" src="" alt="User Photo">
+                    <div class="id-card-info">
+                        <p><strong>Name:</strong> <span id="displayName"></span></p>
+                        <p><strong>College:</strong> <span id="displayCollege"></span></p>
+                        <p><strong>Location:</strong> <span id="displayLocation"></span></p>
+                    </div>
+                </div>
+            </div>
+            <button id="downloadBtn">Download ID Card</button>
+        </div>
+    </div>
+
+    <script src="Assignment_2.js"></script>
+</body>
+</html>
