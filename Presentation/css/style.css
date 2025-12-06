@@ -1,0 +1,328 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+header {
+    background: rgba(13, 17, 64, 0.8); /* Semi-transparent dark background */
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed; /* Keep the nav bar at the top of the page */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it stays on top */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transform: translateY(-100%); /* Initial hidden state */
+    transition: transform 0.3s ease; /* Smooth slide effect */
+}
+
+header .logo {
+    font-size: 18px; /* Slightly smaller font for the logo */
+    font-weight: normal; /* Simple font weight */
+    text-transform: uppercase; /* Optional: all-uppercase letters */
+    letter-spacing: 1px; /* Adds slight spacing for readability */
+}
+
+/* Show Visible Navigation Bar */
+header.visible {
+    transform: translateY(0); /* Slide into view */
+}
+
+header nav ul {
+    display: flex;
+    gap: 15px; /* Space between menu items */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    color: #d9d9d9; /* A lighter color for subtle text */
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Hover effect */
+}
+
+header nav a:hover {
+    color: #fff; /* Brighter text on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Subtle hover highlight */
+    border-radius: 4px; /* Soften hover background shape */
+}
+
+/* Responsive Navbar (for smaller screens) */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    header nav ul {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+        gap: 10px;
+    }
+
+    header nav a {
+        font-size: 16px; /* Slightly larger for smaller screens */
+        padding: 10px 15px;
+    }
+}
+
+/* Section General */
+section {
+    margin: 20px 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section */
+#hero {
+    position: relative; /* Enable layering for the video and content */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent scrolling if the video exceeds bounds */
+}
+
+/* Hero Section */
+#hero {
+    position: relative; /* Enable layering for the video and content */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    overflow: hidden; /* Prevent scrolling if the video exceeds bounds */
+}
+
+/* Background Video */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire viewport */
+    z-index: 0; /* Sits behind the overlay and content */
+}
+
+/* Translucent Overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black layer */
+    z-index: 1; /* Sits above the video */
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Sits above both the video and overlay */
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.hero-content .btn img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.hero-content .btn img:hover {
+    transform: scale(1.1); /* Hover effect for circular button */
+}
+
+/* Highlight Effect */
+.highlight {
+    outline: 5px solid yellow;
+    animation: pop 1s ease-in-out;
+    padding: 15px;
+}
+
+/* Footer Section */
+footer {
+    background: rgba(13, 17, 64, 0.8); /* Consistent with header */
+    color: #fff;
+    text-align: center;
+    padding: 15px 0; /* Added vertical padding */
+}
+
+/* Video Section */
+#services {
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+#services h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.video-section video {
+    width: 100%; /* Responsive video */
+    max-width: 720px; /* Video width limit */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Where Next? Section */
+#about {
+    padding: 20px;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Rounded Cubes Section */
+.rounded-cubes {
+    display: flex;
+    flex-wrap: wrap; /* Wrap cubes for responsiveness */
+    gap: 20px;
+    justify-content: center;
+}
+
+.rounded-cubes .cube {
+    position: relative; /* Enable positioning for hover labels */
+    width: 300px; /* Set dimensions */
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden; /* Ensures the labels stay inside the rounded corners */
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+.rounded-cubes .cube:hover {
+    transform: scale(1.03); /* Slight scaling effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance the shadow on hover */
+}
+
+/* Cube Images */
+.rounded-cubes .cube img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the cube without distortion */
+    transition: filter 0.3s ease; /* Add smooth transition for filter effects */
+}
+
+/* Dim the image slightly on hover */
+.rounded-cubes .cube:hover img {
+    filter: brightness(0.7); /* Darken the image for better text visibility */
+}
+
+/* Cube Hover Labels */
+.rounded-cubes .cube span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    font-size: 20px;
+    font-weight: bold;
+    color: white; /* White text for visibility */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Smoothly fade in/out the label */
+}
+
+/* Show text label on hover */
+.rounded-cubes .cube:hover span {
+    opacity: 1; /* Text is fully visible on hover */
+}
+
+/* Plan Your Trip Section */
+#contact {
+    padding: 30px 20px;
+    background-color: #f9f9f9; /* Light background for simplicity */
+    text-align: center;
+    border-radius: 8px; /* Rounded corners for the section */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%;
+    max-width: 600px; /* Restrict max-width for better balance */
+    margin: 0 auto; /* Center the section */
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Form Inputs */
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc; /* Light gray border for simplicity */
+    border-radius: 4px; /* Rounded corners for inputs */
+    box-sizing: border-box;
+}
+
+#contact textarea {
+    height: 120px; /* Default height for the message box */
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+/* Submit Button */
+#contact button {
+    display: inline-block;
+    background-color: #0d1140; /* Simple dark primary color */
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #333; /* Slightly lighter color on hover */
+}
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem; /* Scale down heading */
+    }
+    .hero-content p {
+        font-size: 1rem; /* Scale down subheading */
+    }
+    .hero-content .btn img {
+        width: 60px; /* Smaller button size */
+        height: 60px;
+    }
+}
